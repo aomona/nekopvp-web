@@ -7,19 +7,12 @@ import type {
 } from 'microcms-js-sdk';
 import { notFound } from 'next/navigation';
 
-// カテゴリーの型定義
-export type Category = {
-  name: string;
-} & MicroCMSContentId &
-  MicroCMSDate;
-
 // ニュースの型定義
 export type News = {
   title: string;
   description: string;
   content: string;
   thumbnail?: MicroCMSImage;
-  category: Category;
 };
 
 // メンバーの型定義
@@ -80,31 +73,6 @@ export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries
   const detailData = await client
     .getListDetail<News>({
       endpoint: 'news',
-      contentId,
-      queries,
-    })
-    .catch(notFound);
-
-  return detailData;
-};
-
-// カテゴリーの一覧を取得
-export const getCategoryList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Category>({
-      endpoint: 'categories',
-      queries,
-    })
-    .catch(notFound);
-
-  return listData;
-};
-
-// カテゴリーの詳細を取得
-export const getCategoryDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  const detailData = await client
-    .getListDetail<Category>({
-      endpoint: 'categories',
       contentId,
       queries,
     })

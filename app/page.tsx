@@ -15,9 +15,9 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>NEKOPVP</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            NEKOPVPの公式サイトです。遊び方・ランクシステムの詳細・最新情報を取り扱っています。
           </p>
         </div>
         <Image
@@ -39,18 +39,15 @@ export default async function Page() {
       <section className={styles.section}>
         <div className={styles.horizontal}>
           <div>
-            <h2 className={styles.sectionTitleEn}>Business</h2>
-            <p className={styles.sectionTitleJa}>事業内容</p>
+            <h2 className={styles.sectionTitleEn}>What is NEKOPVP?</h2>
+            <p className={styles.sectionTitleJa}>NEKOPVPって何？</p>
             <p className={styles.sectionDescription}>
-              当社は、次世代テクノロジーの研究開発・製造・販売を行う革新的な企業です。
-              <br />
-              AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
+              hirokoriの運営する、運営公認の民間イベントです。
             </p>
-            <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
           <Image
             className={styles.businessImg}
-            src="/img-business.png"
+            src="/img-inpvp.png"
             alt=""
             width={1024}
             height={1024}
@@ -62,41 +59,21 @@ export default async function Page() {
           <div className={styles.horizontal}>
             <Image
               className={styles.aboutusImg}
-              src="/img-aboutus.jpg"
+              src="/img-inpvp.png"
               alt=""
               width={6000}
               height={4000}
             />
             <div>
-              <h2 className={styles.sectionTitleEn}>About Us</h2>
-              <p className={styles.sectionTitleJa}>私たちについて</p>
+              <h2 className={styles.sectionTitleEn}>What is NEKOPVP?</h2>
+              <p className={styles.sectionTitleJa}>NEKOPVPって何？</p>
               <p className={styles.sectionDescription}>
-                「テクノロジーの力で世界を変える」をミッションに掲げ、日々活動をしています。
+                hirokoriの運営する、運営公認の民間イベントです。
               </p>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>所在地</dt>
-                <dd className={styles.infoDescription}>
-                  〒000-0000
-                  <br />
-                  東京都渋谷区渋谷1-1-1
-                </dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
-              </dl>
+              <div className="flex flex-row h-full items-baseline">
+                <Image width={100} height={120} alt="" src="/hirokori.png"></Image>
+                <p className={`${styles.sectionDescription}`}>←hirokoriのマインクラフトスキン</p>
+              </div>
             </div>
           </div>
         </section>
